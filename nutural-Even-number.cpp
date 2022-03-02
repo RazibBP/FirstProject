@@ -17,5 +17,17 @@ int main()
 	cout << "your answer : " << sum;
 	cout << endl;
 
+
+	int sumar=0;
+
+	for (int i=1; i<=n; i=i+2)
+	{
+		sumar=sumar+i;
+	}
+
+	cout << "Your answer" << sumar;
+	cout << endl;
+
+
 	return 0;
 }
