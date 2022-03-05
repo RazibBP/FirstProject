@@ -2,23 +2,50 @@
 
 using namespace std;
 
-int main ()
+void boubblesort(int array[],int j)
+
 {
-	void bubble_short(int a[5]={22,14,12,18,9} );
-	
 
-	int i,j,temp,n=5;
-
-	for(i=0; i<n-1; i++)
+  for(int a=0; a<j; a++)
+  {
+    for(int i=0; i<j-a; i++)
+    {
+	if(array[i]>array[i+1])
 	{
-		for(j=0; j<n-1-i; j++)
-		{
-			if(a[j]>a[j+1])
-			{
-				temp=a[j];
-				a[j]=a[j+1];
-				a[j+1]=temp;
-			}
-		}
+       	 int tremp=array[i];
+	 array[i]=array[i+1];
+	 array[i+1]=tremp;
 	}
+    }
+  }
 }
+
+
+void boubblearray(int array[],int j)
+{
+	for(int i=0; i<j; i++)
+	{
+		cout << " " << array[i];
+	}
+	cout << "\n";
+}
+
+int main()
+{
+	int data[]={22,14,12,18,9};
+
+	int j=sizeof(data) / sizeof(data[0]);
+	
+	boubblesort(data,j);
+	
+	cout << "Short array in accending order : ";
+	boubblearray(data,j);
+}
+
+
+
+
+
+
+		
+
